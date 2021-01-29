@@ -77,7 +77,7 @@ if(params$pdf_mode){
 }
 ```
 
-The source code is available on <br> github.com/rajewski/resume](https://github.com/rajewski/resume).
+The source code is available on <br> [github.com/rajewski/resume](https://github.com/rajewski/resume).
 
 
 
