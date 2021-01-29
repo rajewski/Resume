@@ -104,7 +104,7 @@ CV %<>% print_section('education')
 
 
 
-Research Experience {data-icon=laptop}
+Work Experience {data-icon=laptop}
 --------------------------------------------------------------------------------
 
 
@@ -118,14 +118,14 @@ CV %<>% print_text_block('research_aside')
 ```
 :::
 
-Industry Experience {data-icon=suitcase}
---------------------------------------------------------------------------------
+<!-- Industry Experience {data-icon=suitcase} -->
+<!-- -------------------------------------------------------------------------------- -->
 
 
 
-```{r}
-CV %<>% print_section('industry_positions')
-```
+<!-- ```{r} -->
+<!-- CV %<>% print_section('industry_positions') -->
+<!-- ``` -->
 
 
 Teaching Experience {data-icon=chalkboard-teacher}
