@@ -13,10 +13,12 @@
 #'   to be stripped?
 #' @param sheet_is_publicly_readable If you're using google sheets for data,
 #'   is the sheet publicly available? (Makes authorization easier.)
+#' @param resume_mode Do you want a short-form resume instead of a CV?
 #' @return A new `CV_Printer` object.
 create_CV_object <-  function(data_location,
                               pdf_mode = FALSE,
-                              sheet_is_publicly_readable = TRUE) {
+                              sheet_is_publicly_readable = TRUE,
+                              resume_mode=FALSE) {
 
   cv <- list(
     pdf_mode = pdf_mode,
@@ -41,6 +43,9 @@ create_CV_object <-  function(data_location,
       googlesheets4::read_sheet(data_location, sheet = sheet_id, skip = 1, col_types = "c")
     }
     cv$entries_data  <- read_gsheet(sheet_id = "entries")
+    if(resume_mode){
+      cv$entries_data %<>% dplyr::filter(in_resume=="TRUE")
+    }
     cv$skills        <- read_gsheet(sheet_id = "language_skills")
     cv$text_blocks   <- read_gsheet(sheet_id = "text_blocks")
     cv$contact_info  <- read_gsheet(sheet_id = "contact_info")

@@ -154,6 +154,11 @@ CV %<>% print_text_block('academic_articles_aside')
 CV %<>% print_section('academic_articles')
 ```
 
+Outreach {data-icon=handshake-o}
+--------------------------------------------------------------------------------
+```{r}
+CV %<>% print_section('outreach')
+```
 
 Oral and Poster Presentations {data-icon=book}
 --------------------------------------------------------------------------------
