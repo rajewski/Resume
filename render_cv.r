@@ -8,17 +8,17 @@
 # Knit the HTML version then the pdf
 rmarkdown::render("cv.rmd",
                   params = list(pdf_mode = FALSE),
-                  output_file = "cv.html")
-pagedown::chrome_print(input = "cv.html",
-                       output = "cv.pdf")
+                  output_file = "Rajewski_CV.html")
+pagedown::chrome_print(input = "Rajewski_CV.html",
+                       output = "Rajewski_CV.pdf")
 
 
 rmarkdown::render("resume.rmd",
                   params = list(pdf_mode = FALSE,
                                 resume_mode= TRUE),
-                  output_file = "resume.html")
-pagedown::chrome_print(input = "resume.html",
-                       output = "resume.pdf")
+                  output_file = "Rajewski_Resume.html")
+pagedown::chrome_print(input = "Rajewski_Resume.html",
+                       output = "Rajewski_Resume.pdf")
 
 
 # # Knit the PDF version to temporary html location
