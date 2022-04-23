@@ -11,6 +11,15 @@ output:
     self_contained: true
 ---
 
+```{css, echo=FALSE}
+.pagedjs_page:not(:first-of-type) {
+  --sidebar-width: 0rem;
+  --sidebar-background-color: #ffffff;
+  --main-width: calc(var(--content-width) - var(--sidebar-width));
+  --decorator-horizontal-margin: 0.2in;
+}
+```
+
 ```{r, include=FALSE}
 knitr::opts_chunk$set(
   results='asis', 
@@ -66,21 +75,6 @@ Language Skills {#skills}
 CV %>% print_skill_bars()
 ```
 
-Disclaimer {#disclaimer}
---------------------------------------------------------------------------------
-
-```{r, eval=FALSE}
-if(params$pdf_mode){
-  cat("View this CV online with links at _http://rajewski.github.io/CV/_")
-} else {
-  cat("[<i class='fas fa-download'></i> Download a PDF of this #CV](https://github.com/rajewski/resume/rajewski_cv.pdf)")
-}
-```
-
-The source code is available on <br> [github.com/rajewski/resume](https://github.com/rajewski/resume).
-
-
-
 
 Main
 ================================================================================
@@ -112,35 +106,6 @@ Work Experience {data-icon=laptop}
 CV %<>% print_section('research_positions')
 ```
 
-::: aside
-```{r}
-CV %<>% print_text_block('research_aside')
-```
-:::
-
-<!-- Industry Experience {data-icon=suitcase} -->
-<!-- -------------------------------------------------------------------------------- -->
-
-
-
-<!-- ```{r} -->
-<!-- CV %<>% print_section('industry_positions') -->
-<!-- ``` -->
-
-
-Teaching Experience {data-icon=chalkboard-teacher}
---------------------------------------------------------------------------------
-
-<!-- ::: aside -->
-<!-- ```{r} -->
-<!-- CV %<>% print_text_block('teaching_experience_aside') -->
-<!-- ``` -->
-<!-- ::: -->
-
-```{r}
-CV %<>% print_section('teaching_positions')
-```
-
 
 Peer-Reviewed Publications {data-icon=book}
 --------------------------------------------------------------------------------
@@ -153,6 +118,15 @@ CV %<>% print_text_block('academic_articles_aside')
 ```{r}
 CV %<>% print_section('academic_articles')
 ```
+
+Teaching Experience {data-icon=chalkboard-teacher}
+--------------------------------------------------------------------------------
+
+
+```{r}
+CV %<>% print_section('teaching_positions')
+```
+
 
 Outreach {data-icon=handshake-o}
 --------------------------------------------------------------------------------
