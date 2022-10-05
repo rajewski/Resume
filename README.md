@@ -1,6 +1,6 @@
 # Resume
 
-This is a dynamally updating resume based on a google sheet.
+This is a dynamically updating resume based on a google sheet.
 
 
 ## Files
