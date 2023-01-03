@@ -18,7 +18,7 @@ rmarkdown::render("resume.rmd",
                                 resume_mode= TRUE),
                   output_file = "Rajewski_Resume.html")
 pagedown::chrome_print(input = "Rajewski_Resume.html",
-                       output = "Rajewski_Resume.pdf")
+                       output = "Rajewski_Resume.pdf",)
 
 
 # # Knit the PDF version to temporary html location
