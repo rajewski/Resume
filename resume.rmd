@@ -90,7 +90,12 @@ Alex Rajewski {#title}
 CV %<>% print_text_block("intro") 
 ```
 
+Work Experience {data-icon=laptop}
+--------------------------------------------------------------------------------
 
+```{r}
+CV %<>% print_section('research_positions')
+```
 
 Education {data-icon=graduation-cap data-concise=true}
 --------------------------------------------------------------------------------
@@ -100,17 +105,7 @@ CV %<>% print_section('education')
 ```
 
 
-
-Work Experience {data-icon=laptop}
---------------------------------------------------------------------------------
-
-
-```{r}
-CV %<>% print_section('research_positions')
-```
-
-
-Peer-Reviewed Publications {data-icon=book}
+Selected Publications {data-icon=book}
 --------------------------------------------------------------------------------
 
 ```{r}
