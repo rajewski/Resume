@@ -1,5 +1,6 @@
 install.packages("devtools")
-devtools::install_github("nstrayer/datadrivencv")
+devtools::install_github('Ash706/datadrivencv')
+# devtools::install_github("nstrayer/datadrivencv")
 
 datadrivencv::use_datadriven_cv(
   full_name = "Alex Rajewski",
